@@ -10,7 +10,7 @@ These toolkits should provide an environment to explore network automation with 
 
 ## The Autobox (All In One Automation System)
 
-The introductory NERD Box is an all-in-one automation lanbing platform called The Autobox. It runs containerlab with a leaf/spine topology with full data and control plane (Arista cEOS), Ansible, a built-in IDE (VS Code running as a webapp), and Python. It's everything you need to play with network automation. You can also install just about anything on top of it. 
+The introductory NERD Box is an all-in-one automation labbing platform called The Autobox. It runs containerlab with a leaf/spine topology with full data and control plane (Arista cEOS), Ansible, a built-in IDE (VS Code running as a webapp), and Python. It's everything you need to play with network automation. You can also install just about anything on top of it. 
 
 Using the instruction you'll have a VM with the following: 
 

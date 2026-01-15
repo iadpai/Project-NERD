@@ -5,15 +5,14 @@
 
 
 
-echo "Installing Python3 pip and Ansible and Ansible components"
-
 sudo apt -y install python3-pip
+sudo apt -y install ufw
+sudo apt -y install python3.13-venv
 
-mkdir ~/.config/
-mkdir ~/.config/pip
-echo -e "[global]\nbreak-system-packages = true" >> ~/.config/pip/pip.conf
-
-pip3 install ansible
+mkdir ~/pyenv/
+python3 -m env ~/pyenv/default
+source ~/pyevn/default/bin/activate
+pip3 install ansible<12 # We don't want 12 until the Ansible Core 2.19 issue has been resolved
 pip3 install ansible-lint
 
 echo "Installing other utilities"
@@ -22,6 +21,8 @@ sudo apt -y install argon2
 sudo apt -y install git
 sudo apt -y install vim
 sudo apt -y install wget
+sudo apt -y install curl
+sudo apt -y install btop
 
 echo "Installing and enabling code server"
 
@@ -68,3 +69,8 @@ echo "Downloading TLS setup script to ~/.local/bin/"
 curl https://raw.githubusercontent.com/tonybourke/Project-NERD/refs/heads/main/Autobox/setup_tls.sh > ~/.local/bin/setup_tls.sh
 chmod +x ~/.local/bin/setup_tls.sh
 echo "Run command: setup_tls.sh [IP], i.e. 'sh /usr/local/bin/setup_tls.sh 192.168.1.100'"
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+bash -c "$(curl -sL https://get.containerlab.dev)"
