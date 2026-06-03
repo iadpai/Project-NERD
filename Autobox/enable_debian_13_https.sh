@@ -67,6 +67,7 @@ sudo ufw allow 8080
 
 
 echo "Downloading TLS setup script to ~/.local/bin/"
+mkdir ~/.local/bin
 curl https://raw.githubusercontent.com/tonybourke/Project-NERD/refs/heads/main/Autobox/setup_tls.sh > ~/.local/bin/setup_tls.sh
 chmod +x ~/.local/bin/setup_tls.sh
 echo "Run command: setup_tls.sh [IP], i.e. 'sh /usr/local/bin/setup_tls.sh 192.168.1.100'"
