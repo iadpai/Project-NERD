@@ -31,6 +31,7 @@ curl -fsSL https://code-server.dev/install.sh | sh
 
 sudo systemctl enable --now code-server@$USER
 
+mkdir ~/workspace
 sleep 3
 
 
@@ -64,6 +65,7 @@ echo "Configuring the firewall to allow port 8080"
 
 sudo apt-get -y install ufw
 sudo ufw allow 8080
+
 
 
 echo "Downloading TLS setup script to ~/.local/bin/"
