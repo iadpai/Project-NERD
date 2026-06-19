@@ -11,7 +11,7 @@ fi
 
 # Grab the Python script to generate a password
 
-curl -fsSL https://raw.githubusercontent.com/tonybourke/Project-NERD/refs/heads/main/Autobox/mkargon2hash.py > mkargon2hash.py
+curl -fsSL https://raw.githubusercontent.com/iadpai/Project-NERD/refs/heads/main/Autobox/mkargon2hash.py > mkargon2hash.py
 
 
 echo "Installing Argon2 Python3 module (for making a secure hash)"
